@@ -26,8 +26,19 @@ if(playerInput == '1'){
   playerMove = 'kamień';
 } else if (playerInput == '2') {
   playerMove = 'papier';
-} else {
+} else if (playerInput == '3'){
   playerMove = 'nożyce';
 }
 
 printMessage('Twój ruch to: ' + playerMove);
+
+
+if ((computerMove == 'kamień' && playerMove == 'kamień') || (computerMove == 'papier' && playerMove == 'papier') || (computerMove == 'nożyce' && playerMove == 'nożyce')) {
+  printMessage('Mamy remis!');
+} else if ((computerMove == 'kamień' && playerMove == 'papier') || (computerMove == 'papier' && playerMove == 'nożyce') || (computerMove == 'nożyce' && playerMove == 'kamień')) {
+  printMessage('Ty wygrywasz!');
+} else if ((computerMove == 'papier' && playerMove == 'kamień') || (computerMove == 'nożyce' && playerMove == 'papier') || (computerMove == 'kamień' && playerMove == 'nożyce')) {
+  printMessage('Ja wygrywam!');
+} else {
+  printMessage('Wykonałeś ' + playerMove + '! Wpisuj tylko liczby: 1, 2 lub 3');
+}
