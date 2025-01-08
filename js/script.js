@@ -1,4 +1,4 @@
-function playGame(playerInput) {
+{ function playGame(playerInput) {
 
   clearMessages();
 
@@ -43,9 +43,9 @@ function playGame(playerInput) {
   displayResult(computerMove, playerMove);
 }
 
-let rock = document.getElementById('play-rock');
-let paper = document.getElementById('play-paper');
-let scissors = document.getElementById('play-scissors');
+const rock = document.getElementById('play-rock');
+const paper = document.getElementById('play-paper');
+const scissors = document.getElementById('play-scissors');
 
 rock.addEventListener('click', function () {
   playGame(1);
@@ -56,3 +56,4 @@ paper.addEventListener('click', function () {
 scissors.addEventListener('click', function () {
   playGame(3);
 });
+}
