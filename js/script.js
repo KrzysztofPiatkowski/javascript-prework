@@ -1,8 +1,8 @@
-{ function playGame(playerInput) {
+{ const playGame = function (playerInput) {
 
   clearMessages();
 
-  function getMoveName(moveNumber) {
+  const getMoveName = function (moveNumber) {
     if (moveNumber == '1'){
     return 'kamień';
   } else if (moveNumber == '2') {
@@ -28,7 +28,7 @@
 
   printMessage('Twój ruch to: ' + playerMove);
 
-  function displayResult (argComputerMove, argPlayerMove) {
+  const displayResult = function (argComputerMove, argPlayerMove) {
     if (argComputerMove == argPlayerMove) {
     printMessage('Mamy remis!');
   } else if ((argComputerMove == 'kamień' && argPlayerMove == 'papier') || (argComputerMove == 'papier' && argPlayerMove == 'nożyce') || (argComputerMove == 'nożyce' && argPlayerMove == 'kamień')) {
@@ -48,6 +48,7 @@ const paper = document.getElementById('play-paper');
 const scissors = document.getElementById('play-scissors');
 
 rock.addEventListener('click', function () {
+  const rock = document.getElementById('play-rock');
   playGame(1);
 });
 paper.addEventListener('click', function () {
